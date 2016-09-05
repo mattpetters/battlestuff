@@ -4,4 +4,9 @@ console.log('server started');
 
 io.on('connection', function(socket){
     console.log('client connected');
-    })
+    
+    socket.on('move', function(data){
+            console.log('client moved');
+        });
+    
+    });
